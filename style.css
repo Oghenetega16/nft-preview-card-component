@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: hsl(0, 0%, 100%);
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+}
+
+.main {
+    background-color: hsl(216, 50%, 16%);
+    width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.image-container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+.main-image {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: hsl(178, 100%, 50%);
+    border-radius: 10px;
+}
+
+.view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+}
+
+.image-container:hover .overlay {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.image-container:hover .overlay+.view {
+    display: block;
+}
+
+h3 {
+    padding: 25px 0;
+    font-weight: 600;
+}
+
+.first-text {
+    padding: 0 0 20px 0;
+    color: hsl(215, 51%, 70%);
+    font-weight: 400;
+}
+
+.first {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 25px;
+    align-items: center;
+    font-size: 15px;
+}
+
+.second {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 15px;
+    border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.box {
+    display: flex;
+}
+
+.image {
+    margin-right: 7px;
+}
+
+.eth, .time {
+    font-weight: 400;
+}
+
+.second-img {
+    width: 10%;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.one {
+    color: hsl(178, 100%, 50%);
+}
+
+.two {
+    padding-left: 40px;
+    color: hsl(215, 51%, 70%);
+}
+
+.last-text {
+    margin-left: 15px;
+    color: hsl(215, 51%, 70%);
+}
+
+hr {
+    border-color: hsl(215, 32%, 27%);
+}
+
+span {
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+}
+
+.first-img:hover {
+    cursor: pointer;
+}
+
+h3:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+span:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+@media (max-width: 375px) {
+    .main {
+        width: 325px;
+        margin: 50px;
+    }
+}
